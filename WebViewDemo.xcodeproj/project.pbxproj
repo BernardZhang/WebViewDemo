@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D54222112031929D008918B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54222102031929D008918B5 /* ViewController.swift */; };
 		D581537D2031695200491549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581537C2031695200491549 /* AppDelegate.swift */; };
-		D581537F2031695200491549 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581537E2031695200491549 /* ViewController.swift */; };
 		D58153822031695200491549 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58153802031695200491549 /* Main.storyboard */; };
 		D58153842031695200491549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58153832031695200491549 /* Assets.xcassets */; };
 		D58153872031695200491549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58153852031695200491549 /* LaunchScreen.storyboard */; };
 		D58153922031695200491549 /* WebViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58153912031695200491549 /* WebViewDemoTests.swift */; };
 		D581539D2031695200491549 /* WebViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581539C2031695200491549 /* WebViewDemoUITests.swift */; };
+		D58153AB20316BF300491549 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = D58153AA20316BF300491549 /* index.html */; };
+		D58153AF203184CE00491549 /* fixed.html in Resources */ = {isa = PBXBuildFile; fileRef = D58153AE203184CE00491549 /* fixed.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D54222102031929D008918B5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D58153792031695200491549 /* WebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D581537C2031695200491549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D581537E2031695200491549 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D58153812031695200491549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D58153832031695200491549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D58153862031695200491549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		D58153982031695200491549 /* WebViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D581539C2031695200491549 /* WebViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoUITests.swift; sourceTree = "<group>"; };
 		D581539E2031695200491549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D58153AA20316BF300491549 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		D58153AE203184CE00491549 /* fixed.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = fixed.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		D581537B2031695200491549 /* WebViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D54222102031929D008918B5 /* ViewController.swift */,
 				D581537C2031695200491549 /* AppDelegate.swift */,
-				D581537E2031695200491549 /* ViewController.swift */,
 				D58153802031695200491549 /* Main.storyboard */,
 				D58153832031695200491549 /* Assets.xcassets */,
 				D58153852031695200491549 /* LaunchScreen.storyboard */,
 				D58153882031695200491549 /* Info.plist */,
+				D58153AA20316BF300491549 /* index.html */,
+				D58153AE203184CE00491549 /* fixed.html */,
 			);
 			path = WebViewDemo;
 			sourceTree = "<group>";
@@ -233,6 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58153872031695200491549 /* LaunchScreen.storyboard in Resources */,
+				D58153AF203184CE00491549 /* fixed.html in Resources */,
+				D58153AB20316BF300491549 /* index.html in Resources */,
 				D58153842031695200491549 /* Assets.xcassets in Resources */,
 				D58153822031695200491549 /* Main.storyboard in Resources */,
 			);
@@ -259,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D581537F2031695200491549 /* ViewController.swift in Sources */,
+				D54222112031929D008918B5 /* ViewController.swift in Sources */,
 				D581537D2031695200491549 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

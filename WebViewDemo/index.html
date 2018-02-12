@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Local HTML</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                position: fixed;
+                height: 40px;
+                width: 100%;
+                line-height: 40px;
+                text-align: center;
+                background-color: #fff;
+            }
+            section {
+                padding-top: 40px;
+            }
+            footer {
+                
+            }
+        </style>
+        <script>
+            window.JSBrige = {
+                invoke: function (scheme) {
+                    var iframe = document.createElement('iframe');
+                    iframe.src = scheme;
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
+                    window.setTimeout(function () {
+                        document.body.removeChild(iframe);
+                    }, 0);
+                },
+                sayHello: function (msgFromNative) {
+                    alert('h5 sayHello: ' + msgFromNative);
+                },
+                renderContacts: function (contacts) {
+                    var $contacts = document.getElementById('contacts');
+                    var html = '';
+                    contacts.map(function (item) {
+                        html += `<li>${item.firstName + ' ' + item.lastName}</li>`
+                    });
+                    $contacts.innerHTML = html;
+                }
+            };
+        </script>
+        
+    </head>
+    <body>
+        <header>Local HTML</header>
+        <section>
+            <ul>
+                <li><a href="https://m.baidu.com">https://m.baidu.com</a></li>
+                <li><a href="https://boxnovel.baidu.com/boxnovel/dictionary?filters_val=玄幻&data={"need_filters": 1, "cate": "玄幻"}">玄幻书库</a></li>
+                <li>
+                    <a href="javascript:JSBrige.invoke('hybrid://getData?key=contacts&callback=JSBrige.renderContacts')">获取手机通讯录</a>
+                </li>
+                <li>
+                    <a href="javascript:JSBrige.invoke('hybrid://goToWebView?key=fixed')">
+                        hybrid://goToWebView?key=fixed
+                    </a>
+                </li>
+            </ul>
+            <ul id="contacts"></ul>
+        </section>
+    </body>
+</html>
